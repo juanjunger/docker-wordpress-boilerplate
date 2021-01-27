@@ -1,0 +1,42 @@
+version: "3.3"
+
+services:
+  wordpress:
+    build: .
+    restart: always
+    ports:
+      - "8080:80"
+    environment:
+      WORDPRESS_DB_HOST: ${WORDPRESS_DB_HOST}
+      WORDPRESS_DB_USER: ${WORDPRESS_DB_USER}
+      WORDPRESS_DB_PASSWORD: ${WORDPRESS_DB_PASSWORD}
+      WORDPRESS_DB_NAME: ${WORDPRESS_DB_NAME}
+    volumes:
+      - wp_uploads:/var/www/html/wp-content/uploads
+      - wp_themes:/var/www/html/wp-content/themes
+      - ./src/plugins/custom-plugin:/var/www/html/wp-content/plugins/custom-plugin
+      - ./src/themes/custom-theme:/var/www/html/wp-content/themes/custom-theme
+
+  db:
+    image: ${MYSQL_IMAGE}
+    restart: always
+    volumes:
+      - db:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+
+  adminer:
+    image: ${ADMINER_IMAGE}
+    restart: always
+    depends_on:
+      - db
+    ports:
+      - "8888:8080"
+
+volumes:
+  db:
+  wp_themes:
+  wp_uploads:
