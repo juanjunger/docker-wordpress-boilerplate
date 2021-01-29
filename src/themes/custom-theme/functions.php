@@ -1,9 +1,10 @@
 <?php
 
-    function custom_theme_assets() {
-        wp_enqueue_style('style', get_stylesheet_uri());
+    // Register css stylesheets
+    function wpt_register_css() {
+        wp_register_style( 'style', get_template_directory_uri() . '/style.css' );
+        wp_enqueue_style( 'style' );
     }
-
-    add_action('wp_enqueue_scripts', 'custom_theme_assets');
+    add_action( 'wp_enqueue_scripts', 'wpt_register_css' );
 
 ?>
