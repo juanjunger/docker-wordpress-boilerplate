@@ -10,10 +10,141 @@
     * License URI: http://www.gnu.org/licenses/gpl-3.0.html
 **/
 
-* {
-  box-sizing: border-box;
+/* Header */
+
+header {
+  padding: 60px 6%;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e4e4e4;
 }
 
-body {
-  font-family: Helvetica;
+header .header__logo a {
+  text-decoration: none;
+}
+
+header .header__logo h3 {
+  font-family: "Open Sans";
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #2d2d2d;
+}
+
+header .header__menu nav ul {
+  list-style-type: none;
+}
+
+header .header__menu nav ul li a {
+  text-decoration: none;
+  padding: 10px 30px;
+  background-color: #21759b;
+  border-radius: 30px;
+  font-family: "Open Sans";
+  font-size: 1rem;
+  font-weight: 700;
+  color: #ffffff;
+  border: 2px solid #21759b;
+}
+
+header .header__menu nav ul li a:hover {
+  background-color: #ffffff;
+  color: #21759b;
+}
+
+/* Main Section */
+
+main section {
+  padding: 120px 6%;
+}
+
+main section .title {
+  width: 80%;
+  margin: 0 auto 60px auto;
+}
+
+main section .title h1 {
+  font-family: "Open Sans";
+  font-size: 3rem;
+  font-weight: 700;
+  color: #2d2d2d;
+  text-align: center;
+}
+
+main section .content .content__image img {
+  width: 100%;
+}
+
+main section .content .content__text {
+  width: 50%;
+}
+
+main section .content .content__text h3 {
+  font-family: "Open Sans";
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2d2d2d;
+}
+
+main section .content .content__text p {
+  font-family: "Open Sans";
+  font-size: 1rem;
+  font-weight: 400;
+  color: #2d2d2d;
+  line-height: 1.5rem;
+  margin-bottom: 30px;
+}
+
+main section .content .content__text a {
+  text-decoration: none;
+}
+
+main section .content .content__text a.btn {
+  text-decoration: none;
+  padding: 10px 30px;
+  background-color: #ffffff;
+  border-radius: 30px;
+  font-family: "Open Sans";
+  font-size: 1rem;
+  font-weight: 700;
+  color: #21759b;
+  border: 2px solid #21759b;
+}
+
+main section .content .content__text a.btn:hover {
+  background-color: #21759b;
+  color: #ffffff;
+}
+
+/* Footer */
+
+footer {
+  padding: 60px 6%;
+  background-color: #ffffff;
+  border-top: 1px solid #e4e4e4;
+}
+
+footer nav ul {
+  list-style-type: none;
+}
+
+footer nav ul li {
+  display: inline-block;
+  margin-left: 15px;
+  color: #7b7b7b;
+  font-family: "Open Sans";
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+footer nav ul li a {
+  text-decoration: none;
+  color: #7b7b7b;
+}
+
+footer nav ul li.bullet {
+  background-color: #c4c4c4;
+  width: 5px;
+  height: 5px;
+  position: relative;
+  top: -2.5px;
+  border-radius: 5px;
 }
