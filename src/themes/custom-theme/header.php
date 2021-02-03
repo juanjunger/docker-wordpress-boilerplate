@@ -26,12 +26,9 @@
         <meta name="twitter:title" content="" />
         <meta name="twitter:description" content="" />
         <meta name="twitter:image" content="" />
-    
-        <!-- Custom stylesheets -->
-        <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/assets/css/fonts.css">
-        <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/assets/css/reset.css">
-        <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
-        <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/assets/css/responsive.css">
+
+        <title><?php bloginfo('name'); ?> &raquo; <?php is_front_page() ? bloginfo('description') : wp_title(''); ?></title>
+        
         <?php wp_head(); ?>
     </head>
 

@@ -1,1 +1,1 @@
-<?php // Avoid show directories structure ?>
+<?php // Silence is Golden ?>

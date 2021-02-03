@@ -1,0 +1,22 @@
+/**
+    * Theme name: Custom Theme Child Boilerplate
+    * Theme URI: http://example.com
+    * Author: Your Name or Your Company
+    * Author URI: http://example.com/
+    * Github Theme URI: http://github.com/custom-theme-url/
+    * Description: This is a short description of the theme.
+    * Template: custom-theme
+    * Text Domain: custom-theme-child
+    * Version: 1.0.0
+    * License: GNU General Public License v3 or later
+    * License URI: http://www.gnu.org/licenses/gpl-3.0.html
+**/
+
+header .header__menu nav ul li a {
+  background-color: #ff6900;
+  border: 2px solid #ff6900;
+}
+
+header .header__menu nav ul li a:hover {
+  color: #ff6900;
+}

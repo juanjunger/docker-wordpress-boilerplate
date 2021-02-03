@@ -12,14 +12,13 @@
                 <div class="content">
                     <div class="flex flex--center">
                         <div class="content__image">
-                            <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/image.png" alt="Image" />
+                            <img src="<?php echo get_template_directory_uri() . '/assets/img/image.png'; ?>" alt="Image" />
                         </div>
                         <div class="content__text flex flex--column flex--start">
                             <h3><?php the_title(); ?></h3>
                             <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
                                 <p><?php the_content(); ?></p>
                             </a>
-                            <!-- <span><?php #the_author(); ?></span> -->
                             <a href="" class="btn">Buy me a Coffee</a>
                         </div>
                     </div>
@@ -35,7 +34,7 @@
 
         </div>
     </section>
-    <?php get_sidebar(); ?>
+    <?php #get_sidebar(); ?>
 </main>
 
 <?php get_footer(); ?>
